@@ -12,11 +12,12 @@ from fontTools.varLib.instancer import instantiateVariableFont
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "assets" / "brand"
-FONT = ROOT / "assets" / "fonts" / "bricolage-grotesque.woff2"
+FONT = ROOT / "assets" / "fonts" / "archivo.woff2"
 
 RED = "#D52B1E"
 YELLOW = "#F7C21B"
-INK = "#1D1B19"
+INK = "#3D0B07"
+RED_DEEP = "#A51D13"
 WHITE = "#FFFFFF"
 
 
@@ -69,24 +70,24 @@ def main():
     (OUT / "favicon.svg").write_text(svg(64, 64, mark(), "Alles-Atlas.de"))
 
     # Horizontal logo, positive + negative
-    for name, ink, de, tag in (("logo.svg", INK, RED, "#6B635B"),
-                               ("logo-white.svg", WHITE, YELLOW, "#E8DFD3")):
+    for name, ink, de, tag, inv in (("logo.svg", RED, RED_DEEP, RED_DEEP, False),
+                                    ("logo-white.svg", WHITE, YELLOW, "#FFF4CC", True)):
         word, end = text_paths(heavy, "Alles-Atlas.de", 92, 50, 46,
                                [(11, ink), (3, de)])
         sub, end2 = text_paths(medium, "Außergewöhnlich günstig!", 94, 76, 17.5,
                                [(24, tag)])
         w = max(end, end2) + 6
-        (OUT / name).write_text(svg(w, 84, mark(0, 4, 76) + "\n" + word + "\n" + sub,
+        (OUT / name).write_text(svg(w, 84, (mark(0, 4, 76, bg=WHITE, fg=RED) if inv else mark(0, 4, 76)) + "\n" + word + "\n" + sub,
                                     "Alles-Atlas.de: Außergewöhnlich günstig!"))
 
     # Stacked logo (for flyers, vans, social)
-    word, end = text_paths(heavy, "Alles-Atlas.de", 0, 0, 46, [(11, INK), (3, RED)])
+    word, end = text_paths(heavy, "Alles-Atlas.de", 0, 0, 46, [(11, RED), (3, RED_DEEP)])
     wordw = end
     W = wordw + 40
-    word, _ = text_paths(heavy, "Alles-Atlas.de", 20, 170, 46, [(11, INK), (3, RED)])
-    sub, e2 = text_paths(medium, "Außergewöhnlich günstig!", 0, 0, 17.5, [(24, "#6B635B")])
+    word, _ = text_paths(heavy, "Alles-Atlas.de", 20, 170, 46, [(11, RED), (3, RED_DEEP)])
+    sub, e2 = text_paths(medium, "Außergewöhnlich günstig!", 0, 0, 17.5, [(24, RED_DEEP)])
     sub, _ = text_paths(medium, "Außergewöhnlich günstig!", (W - e2) / 2, 198, 17.5,
-                        [(24, "#6B635B")])
+                        [(24, RED_DEEP)])
     body = mark((W - 108) / 2, 10, 108) + "\n" + word + "\n" + sub
     (OUT / "logo-stacked.svg").write_text(svg(W, 212, body, "Alles-Atlas.de"))
     print("written:", sorted(p.name for p in OUT.glob("*.svg")))
