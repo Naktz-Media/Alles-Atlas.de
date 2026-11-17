@@ -77,7 +77,7 @@ def main():
                                [(24, tag)])
         w = max(end, end2) + 6
         (OUT / name).write_text(svg(w, 84, mark(0, 4, 76) + "\n" + word + "\n" + sub,
-                                    "Alles-Atlas.de – Außergewöhnlich günstig!"))
+                                    "Alles-Atlas.de: Außergewöhnlich günstig!"))
 
     # Stacked logo (for flyers, vans, social)
     word, end = text_paths(heavy, "Alles-Atlas.de", 0, 0, 46, [(11, INK), (3, RED)])

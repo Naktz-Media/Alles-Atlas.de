@@ -1,4 +1,4 @@
-/* Alles-Atlas.de – kleine Helfer, keine Tracker */
+/* Alles-Atlas.de: kleine Helfer, keine Tracker */
 (function () {
   "use strict";
 

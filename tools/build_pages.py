@@ -21,7 +21,7 @@ SITE = "https://alles-atlas.de"
 BUSINESS = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Alles-Atlas.de – Atlas Entrümpelung",
+    "name": "Alles-Atlas.de · Atlas Entrümpelung",
     "description": "Entrümpelung, Haushaltsauflösung, Umzüge, Transporte und Second-Hand-Ladengeschäft in Dortmund.",
     "url": SITE + "/",
     "logo": SITE + "/assets/brand/logo.svg",

@@ -1,4 +1,4 @@
-/* Alles-Atlas.de – Stylesheet
+/* Alles-Atlas.de Stylesheet
    Marke: Atlas-Rot, Lastenkamel-Gelb, Tinte, Papier */
 
 @font-face {
@@ -84,7 +84,6 @@ p { margin: 0 0 1em; text-wrap: pretty; }
   color: var(--red-deep);
   margin-bottom: 1rem;
 }
-.eyebrow::before { content: ""; width: 22px; height: 3px; background: var(--yellow); border-radius: 2px; }
 .section--ink .eyebrow, .section--red .eyebrow { color: var(--yellow); }
 .lead { font-size: clamp(1.1rem, 1.6vw, 1.3rem); color: var(--ink-2); max-width: 62ch; }
 .muted { color: var(--muted); }

@@ -1,6 +1,6 @@
 # Alles-Atlas.de
 
-New website and brand for **Alles-Atlas.de – Atlas Entrümpelung** (Dortmund).
+New website and brand for **Alles-Atlas.de · Atlas Entrümpelung** (Dortmund).
 It is a static site with no WordPress, no database, no cookies and no tracking.
 
 ## Pages (same names and structure as the old site)
