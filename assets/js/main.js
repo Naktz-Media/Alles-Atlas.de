@@ -31,8 +31,10 @@
   document.querySelectorAll("[data-mail]").forEach(function (el) {
     var addr = el.getAttribute("data-mail").replace(" (at) ", "@");
     if (el.tagName === "A") el.href = "mailto:" + addr;
-    var t = el.querySelector("[data-mail-text]") || el;
-    t.textContent = addr;
+    // Nur den Text ersetzen, wenn der Link keine eigene Beschriftung mit Icon hat
+    var t = el.querySelector("[data-mail-text]") || (el.children.length === 0 ? el : null);
+    if (t) t.textContent = addr;
+    if (el.hasAttribute("aria-label")) el.setAttribute("aria-label", "E-Mail an " + addr + " schreiben");
   });
 
   // Jahreszahl im Footer
