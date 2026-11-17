@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Nougaoui;Aziz;;;
+FN:Aziz Nougaoui
+ORG:Alles-Atlas.de – Atlas Entrümpelung
+TEL;TYPE=WORK,VOICE:+49 231 13091118
+TEL;TYPE=CELL:+49 178 3489071
+EMAIL;TYPE=WORK:info@alles-atlas.de
+ADR;TYPE=WORK:;;Mozartstr. 17;Dortmund;;44147;Deutschland
+URL:https://alles-atlas.de/
+NOTE:Entrümpelung\, Haushaltsauflösung\, Umzüge\, Transporte\, Second-Hand
+END:VCARD

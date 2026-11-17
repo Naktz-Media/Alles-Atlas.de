@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /brand/
+Sitemap: https://alles-atlas.de/sitemap.xml
