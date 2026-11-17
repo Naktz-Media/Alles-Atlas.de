@@ -31,6 +31,15 @@ To regenerate the logo files (only needed if you change the logo design):
 pip install fonttools brotli && python3 tools/build_logo.py
 ```
 
+The four mood photos (`hero`, `entruempelung`, `umzuege`, `laden` in `assets/img/`) were generated with the Higgsfield API (SOUL model). To regenerate them:
+
+```bash
+export HF_CREDENTIALS="KEY_ID:KEY_SECRET"
+python3 tools/generate_images.py            # or: … hero laden
+```
+
+The real photos (the van, the portrait, the flyers and the map) come from the old site.
+
 Preview it locally with `python3 -m http.server` and open http://localhost:8000.
 
 ## Deployment

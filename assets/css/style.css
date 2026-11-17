@@ -185,12 +185,16 @@ p { margin: 0 0 1em; text-wrap: pretty; }
   margin-bottom: 1.1rem;
 }
 .hero .lead { margin-bottom: 1.8rem; }
-.hero-media { position: relative; }
-.hero-media figure { margin: 0; }
-.hero-media img { border-radius: var(--radius); box-shadow: var(--shadow); width: 100%; aspect-ratio: 1600 / 638; object-fit: cover; }
-.hero-media figcaption { margin-top: 12px; font-size: .95rem; color: var(--muted); font-style: italic; }
+.hero-media { position: relative; padding-bottom: 84px; }
+.hero-photo { border-radius: var(--radius); box-shadow: var(--shadow); width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.hero-van {
+  position: absolute; left: -32px; bottom: 0; width: 54%; margin: 0;
+  background: var(--card); padding: 8px 8px 10px; border-radius: 16px; box-shadow: var(--shadow);
+}
+.hero-van img { width: 100%; border-radius: 10px; aspect-ratio: 1600 / 638; object-fit: cover; }
+.hero-van figcaption { margin: 8px 4px 0; font-size: .86rem; color: var(--muted); font-style: italic; line-height: 1.3; }
 .hero-badge {
-  position: absolute; left: -18px; bottom: 40px;
+  position: absolute; right: -14px; top: 22px;
   background: var(--card); border-radius: 14px; box-shadow: var(--shadow);
   padding: 12px 16px; display: flex; gap: 10px; align-items: center;
   font-weight: 600; font-size: .95rem; line-height: 1.3;
@@ -203,7 +207,10 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 .trust svg { width: 18px; height: 18px; color: var(--red); flex: none; }
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: 1fr; }
-  .hero-badge { position: static; margin-top: 12px; box-shadow: none; border: 1px solid var(--line); display: inline-flex; }
+  .hero-media { padding-bottom: 0; }
+  .hero-van { position: relative; left: auto; width: 78%; margin: -48px 0 0 12px; }
+  .hero-badge { right: 12px; top: 12px; padding: 10px 12px; font-size: .88rem; }
+  .hero-badge .dot { width: 34px; height: 34px; }
 }
 
 /* ---------- Service tiles ---------- */
@@ -239,7 +246,10 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 .split--top { align-items: start; }
 .flyers { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: start; }
 .flyers a { display: block; border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow); background: #fff; }
-.flyers a:nth-child(2) { margin-top: 40px; }
+.shop-photo { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow); aspect-ratio: 4 / 3; object-fit: cover; }
+.shop-media .flyers { margin-top: 14px; }
+.shop-media .flyers img { aspect-ratio: 16 / 10; object-fit: cover; object-position: top; }
+.service-photo { width: 100%; border-radius: var(--radius); aspect-ratio: 16 / 9; object-fit: cover; margin-bottom: 1.6rem; box-shadow: var(--shadow); }
 .flyers img { width: 100%; transition: transform .3s ease; }
 .flyers a:hover img { transform: scale(1.03); }
 @media (max-width: 860px) { .split { grid-template-columns: 1fr; } }
