@@ -268,18 +268,34 @@ p { margin: 0 0 1em; text-wrap: pretty; }
   .tile-go { top: 12px; bottom: auto; right: 12px; width: 26px; height: 26px; }
 }
 
-/* ---------- Quote ---------- */
-.quote-grid { display: grid; grid-template-columns: auto 1fr; gap: clamp(28px, 6vw, 72px); align-items: center; }
-.quote-portrait { width: clamp(150px, 20vw, 220px); }
-.quote-portrait img { border-radius: 999px; filter: grayscale(1) contrast(1.05); border: 5px solid var(--yellow); }
-.bigquote {
-  font-family: var(--font-display); font-weight: 800;
-  font-size: clamp(2rem, 5vw, 3.8rem); line-height: 1.02; letter-spacing: -.03em;
-  margin: 0 0 .5em; text-transform: uppercase;
+/* ---------- Motto / Zitat ---------- */
+.motto { position: relative; overflow: hidden; }
+.motto-bg {
+  position: absolute; right: -6%; top: 50%; transform: translateY(-50%);
+  width: min(62vw, 620px); height: auto; color: #fff; opacity: .08; pointer-events: none;
 }
-.bigquote em { font-style: normal; color: var(--yellow); }
-.quote-by { font-weight: 600; color: var(--yellow-soft); }
-@media (max-width: 680px) { .quote-grid { grid-template-columns: 1fr; } }
+.motto-card { position: relative; margin: 0; max-width: 980px; }
+.motto-mark { display: block; width: clamp(56px, 8vw, 84px); height: auto; color: var(--yellow); margin-bottom: clamp(16px, 2.5vw, 28px); }
+.motto-card blockquote { margin: 0; }
+.motto-card blockquote p {
+  margin: 0;
+  font-family: var(--font-display); font-weight: 900; text-transform: uppercase;
+  font-size: clamp(2.2rem, 6.4vw, 5.2rem); line-height: 1.02; letter-spacing: -.02em;
+  color: #fff; text-wrap: balance;
+}
+.motto-card mark {
+  background: var(--yellow); color: var(--red-deep);
+  padding: 0 .18em; border-radius: .12em;
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+}
+.motto-by { display: flex; align-items: center; gap: 16px; margin-top: clamp(28px, 4vw, 44px); }
+.motto-by img {
+  width: clamp(72px, 9vw, 96px); height: clamp(72px, 9vw, 96px); flex: none;
+  border-radius: 50%; object-fit: cover;
+  border: 4px solid #fff; box-shadow: 0 0 0 4px var(--yellow);
+}
+.motto-by span { display: grid; line-height: 1.3; color: var(--yellow-soft); font-weight: 500; }
+.motto-by strong { font-family: var(--font-display); font-size: 1.35rem; color: #fff; font-weight: 800; }
 
 /* ---------- Split / Shop ---------- */
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 72px); align-items: center; }
