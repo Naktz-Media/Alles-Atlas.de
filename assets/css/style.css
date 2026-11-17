@@ -188,7 +188,6 @@ p { margin: 0 0 1em; text-wrap: pretty; }
   font-size: clamp(1.3rem, 2.4vw, 1.75rem);
   background: var(--yellow); color: var(--red-deep);
   padding: .1em .45em; border-radius: 8px;
-  transform: rotate(-1.5deg);
   margin-bottom: 1.1rem;
 }
 .hero .lead { margin-bottom: 1.8rem; }
