@@ -47,6 +47,22 @@ IMAGES = {
                 "tape on a wooden floor. In the background an armchair and a sideboard "
                 "wrapped in grey quilted moving blankets with straps. Organised, careful, "
                 "professional."),
+    "haushaltsaufloesung": ("4:3", 1000,
+                            "A living room in the middle of a household clearance: a sofa and armchair "
+                            "covered with protective sheets, stacked closed cardboard boxes, rolled carpet, "
+                            "framed pictures leaning against the wall, soft window light. Orderly and calm."),
+    "kellerraeumung": ("4:3", 1000,
+                       "A freshly cleared, swept basement cellar room with whitewashed brick walls, "
+                       "an empty metal shelf, a single bare bulb and a broom; a few remaining boxes "
+                       "by the door ready to be carried out. Clean and bright for a cellar."),
+    "geschaeftsaufloesung": ("4:3", 1000,
+                             "An office being cleared out: desks pushed together, office chairs stacked, "
+                             "monitors and files packed in boxes on a trolley, large windows, daylight. "
+                             "No people."),
+    "betriebsaufloesung": ("4:3", 1000,
+                           "A workshop warehouse being cleared: empty pallet racks, a pallet jack, "
+                           "shrink-wrapped pallets of goods ready for transport, concrete floor, "
+                           "high windows with daylight. No people."),
     "laden": ("4:3", 1400,
               "Inside a cosy second-hand furniture and antiques shop: vintage wooden "
               "cabinets, a leather sofa, armchairs, brass lamps, framed paintings, ceramic "
