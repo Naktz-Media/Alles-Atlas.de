@@ -469,3 +469,4 @@ p { margin: 0 0 1em; text-wrap: pretty; }
   .callbar .btn { min-height: 48px; font-size: 1rem; padding-inline: .8em; }
   body { padding-bottom: 76px; }
 }
+.nowrap { white-space: nowrap; }
